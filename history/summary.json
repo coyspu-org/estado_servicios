@@ -10,31 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 5887,
-    "timeDay": 5887,
-    "timeWeek": 5887,
-    "timeMonth": 5887,
-    "timeYear": 5887,
+    "time": 5003,
+    "timeDay": 5003,
+    "timeWeek": 5003,
+    "timeMonth": 5003,
+    "timeYear": 5003,
     "dailyMinutesDown": {}
-  },
-  {
-    "name": "Grilla de TV COYSPU",
-    "url": "https://coyspu.github.io/appmundial/",
-    "icon": "https://icons.duckduckgo.com/ip3/coyspu.github.io.ico",
-    "slug": "grilla-de-tv-coyspu",
-    "status": "down",
-    "uptime": "19.84%",
-    "uptimeDay": "19.84%",
-    "uptimeWeek": "19.84%",
-    "uptimeMonth": "19.84%",
-    "uptimeYear": "19.84%",
-    "time": 14,
-    "timeDay": 14,
-    "timeWeek": 14,
-    "timeMonth": 14,
-    "timeYear": 14,
-    "dailyMinutesDown": {
-      "2026-09-24": 1
-    }
   }
 ]
