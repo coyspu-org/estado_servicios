@@ -1,0 +1,65 @@
+name: Setup CI
+on:
+  push:
+    paths:
+      - ".upptimerc.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: upptime-setup
+  cancel-in-progress: false
+jobs:
+  release:
+    name: Initial Upptime setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT || github.token }}
+      - name: Update template
+        uses: upptime/uptime-monitor@v1.44.1
+        with:
+          command: "update-template"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
+      - name: Check endpoint status
+        uses: upptime/uptime-monitor@v1.44.1
+        with:
+          command: "update"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
+      - name: Record response time
+        uses: upptime/uptime-monitor@v1.44.1
+        with:
+          command: "response-time"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
+      - name: Generate graphs
+        uses: upptime/uptime-monitor@v1.44.1
+        with:
+          command: "graphs"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
+      - name: Update README
+        uses: upptime/uptime-monitor@v1.44.1
+        with:
+          command: "readme"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
+      - name: Generate site
+        uses: upptime/uptime-monitor@v1.44.1
+        with:
+          command: "site"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_PAT || github.token }}
+          publish_dir: "site/status-page/__sapper__/export/"
+          force_orphan: false
+          user_name: "Upptime Bot"
+          user_email: "73812536+upptime-bot@users.noreply.github.com"

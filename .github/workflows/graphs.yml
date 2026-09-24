@@ -1,0 +1,31 @@
+name: Graphs CI
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  repository_dispatch:
+    types: [graphs]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: upptime-graphs
+  cancel-in-progress: false
+jobs:
+  release:
+    name: Generate graphs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT || github.token }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Generate graphs
+        uses: upptime/uptime-monitor@v1.44.1
+        with:
+          command: "graphs"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}

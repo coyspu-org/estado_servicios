@@ -1,0 +1,58 @@
+# Upptime configuration for COYSPU
+# https://upptime.js.org/docs/configuration
+
+owner: coyspu-org
+repo: estado_servicios
+user-agent: coyspu-upptime
+
+sites:
+  - name: Sitio web COYSPU
+    url: https://coyspu.coop.ar/
+  - name: Grilla de TV COYSPU
+    url: https://coyspu.github.io/appmundial/
+
+status-website:
+  baseUrl: /estado_servicios
+  name: Estado de servicios COYSPU
+  logoUrl: https://raw.githubusercontent.com/coyspu-org/estado_servicios/main/assets/logo-coyspu.png
+  favicon: https://raw.githubusercontent.com/coyspu-org/estado_servicios/main/assets/logo-coyspu.png
+  introTitle: "Estado de servicios COYSPU"
+  introMessage: "Monitoreo automático con GitHub Actions. Los incidentes se registran en GitHub Issues."
+  navbar:
+    - title: COYSPU
+      href: https://coyspu.coop.ar/
+    - title: GitHub
+      href: https://github.com/$OWNER/$REPO
+  i18n:
+    activeIncidents: Incidentes activos
+    allSystemsOperational: Todos los sistemas operativos
+    incidentReport: "Informe del incidente #$NUMBER →"
+    activeIncidentSummary: Abierto el $DATE con $POSTS actualizaciones
+    incidentTitle: Detalle del incidente #$NUMBER
+    incidentDetails: Detalles del incidente
+    incidentFixed: Resuelto
+    incidentOngoing: En curso
+    incidentOpenedAt: Abierto el
+    incidentClosedAt: Cerrado el
+    incidentViewOnGitHub: Ver y suscribirse en GitHub
+    pastIncidents: Incidentes anteriores
+    pastIncidentsResolved: Resuelto en $MINUTES minutos con $POSTS actualizaciones
+    liveStatus: Estado en vivo
+    overallUptime: "Disponibilidad general: $UPTIME"
+    overallUptimeTitle: Disponibilidad general
+    averageResponseTime: "Tiempo de respuesta promedio: $TIME ms"
+    averageResponseTimeTitle: Tiempo de respuesta promedio
+    responseTimeMs: Tiempo de respuesta (ms)
+    up: Operativo
+    down: Caído
+    degraded: Degradado
+    ms: ms
+    loading: Cargando
+    navGitHub: GitHub
+    footer: Esta página es [código abierto]($REPO), impulsada por [Upptime](https://upptime.js.org)
+    scheduledMaintenance: Mantenimiento programado
+    pastScheduledMaintenance: Mantenimientos anteriores
+    incidentCompleted: Completado
+    incidentScheduled: Programado
+    durationMin: $DURATION minutos
+    locale: es-AR
