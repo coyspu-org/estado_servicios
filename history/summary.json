@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Sitio web COYSPU",
+    "url": "https://coyspu.coop.ar/",
+    "icon": "https://icons.duckduckgo.com/ip3/coyspu.coop.ar.ico",
+    "slug": "sitio-web-coyspu",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 6963,
+    "timeDay": 6963,
+    "timeWeek": 6963,
+    "timeMonth": 6963,
+    "timeYear": 6963,
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "Grilla de TV COYSPU",
+    "url": "https://coyspu.github.io/appmundial/",
+    "icon": "https://icons.duckduckgo.com/ip3/coyspu.github.io.ico",
+    "slug": "grilla-de-tv-coyspu",
+    "status": "down",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 13,
+    "timeDay": 13,
+    "timeWeek": 13,
+    "timeMonth": 13,
+    "timeYear": 13,
+    "dailyMinutesDown": {}
+  }
+]
