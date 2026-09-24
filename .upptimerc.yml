@@ -9,8 +9,6 @@ user-agent: coyspu-upptime
 sites:
   - name: Sitio web COYSPU
     url: https://coyspu.coop.ar/
-  - name: Grilla de TV COYSPU
-    url: https://coyspu.github.io/appmundial/
 
 status-website:
   baseUrl: /estado_servicios
