@@ -1,5 +1,6 @@
 # Upptime configuration for COYSPU
 # https://upptime.js.org/docs/configuration
+# Setup prepared for GitHub Actions, Issues and Pages
 
 owner: coyspu-org
 repo: estado_servicios
