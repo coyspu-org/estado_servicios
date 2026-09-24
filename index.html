@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Estado actualizado de los servicios de COYSPU: Internet, Televisión, Telefonía, Agua y Monitoreo."
+    />
+    <meta name="theme-color" content="#f4f7f1" />
+    <title>Estado de servicios | COYSPU</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%239bc53d'/%3E%3Cpath d='M32 11C24 23 17 31 17 40a15 15 0 0 0 30 0c0-9-7-17-15-29Z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-content">
+        <a class="brand" href="./" aria-label="COYSPU, inicio">
+          <img src="./assets/logo-coyspu.png" alt="COYSPU" width="300" height="88" />
+        </a>
+        <div class="header-label">
+          <span class="eyebrow">Información pública</span>
+          <span>Estado de servicios</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <aside class="demo-notice" aria-label="Aviso de demostración">
+        <strong>Prototipo · Datos de demostración.</strong>
+        Los estados, incidentes y fechas son ficticios; no representan el estado real de COYSPU.
+      </aside>
+      <section class="overall-card" id="overall-card" aria-live="polite">
+        <div class="overall-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="m5 12 4 4L19 6" />
+          </svg>
+        </div>
+        <div class="overall-copy">
+          <p class="eyebrow">Estado general</p>
+          <h1 id="overall-title">Consultando el estado de los servicios…</h1>
+          <p id="overall-message">Esta información se actualiza automáticamente.</p>
+        </div>
+        <div class="update-box">
+          <span class="live-pill"><span class="pulse"></span> Actualización automática</span>
+          <time id="updated-at">—</time>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="services-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Disponibilidad actual</p>
+            <h2 id="services-title">Nuestros servicios</h2>
+          </div>
+          <button class="refresh-button" id="refresh-button" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8.1 8.1 0 1 0-2.4 5.8M20 4v7h-7" /></svg>
+            Actualizar
+          </button>
+        </div>
+
+        <div class="services-grid" id="services-grid" aria-live="polite">
+          <div class="service-skeleton"></div>
+          <div class="service-skeleton"></div>
+          <div class="service-skeleton"></div>
+          <div class="service-skeleton"></div>
+          <div class="service-skeleton"></div>
+        </div>
+      </section>
+
+      <section class="section-block" id="active-section" aria-labelledby="active-title">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">Información en curso</p>
+            <h2 id="active-title">Incidentes activos</h2>
+          </div>
+        </div>
+        <div id="active-incidents" aria-live="polite"></div>
+      </section>
+
+      <section class="section-block history-section" aria-labelledby="history-title">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">Últimos eventos</p>
+            <h2 id="history-title">Historial reciente</h2>
+          </div>
+        </div>
+        <div class="history-card">
+          <ol class="history-list" id="history-list"></ol>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer-content">
+        <div>
+          <strong>COYSPU</strong>
+          <p>Cooperativa de Provisión de Obras y Servicios Públicos de Marcos Juárez Ltda.</p>
+        </div>
+        <p class="footer-note">Este panel informa incidentes generales. Una falla particular puede no aparecer aquí.</p>
+      </div>
+    </footer>
+
+    <noscript>
+      <div class="noscript">Para consultar el estado actualizado, habilitá JavaScript en tu navegador.</div>
+    </noscript>
+  </body>
+</html>
