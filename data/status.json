@@ -1,1 +1,70 @@
+{
+  "updated_at": "2026-09-22T17:40:00-03:00",
+  "services": [
+    {
+      "id": "internet",
+      "name": "Internet",
+      "status": "operational",
+      "message": "Funcionamiento normal"
+    },
+    {
+      "id": "tv",
+      "name": "Televisión",
+      "status": "operational",
+      "message": "Funcionamiento normal"
+    },
+    {
+      "id": "telefonia",
+      "name": "Telefonía",
+      "status": "operational",
+      "message": "Funcionamiento normal"
+    },
+    {
+      "id": "agua",
+      "name": "Agua",
+      "status": "degraded",
+      "message": "Afectación parcial en zona norte"
+    },
+    {
+      "id": "monitoreo",
+      "name": "Monitoreo",
+      "status": "operational",
+      "message": "Funcionamiento normal"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "agua-zona-norte-20260922",
+      "active": true,
+      "service": "Agua",
+      "severity_label": "Incidencia parcial",
+      "title": "Baja presión en zona norte",
+      "message": "Nuestro equipo se encuentra trabajando para normalizar el servicio.",
+      "started_at": "2026-09-22T16:45:00-03:00"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-22T14:20:00-03:00",
+      "service": "Internet",
+      "message": "Incidencia general normalizada",
+      "status": "operational",
+      "label": "Resuelto"
+    },
+    {
+      "date": "2026-09-21T23:00:00-03:00",
+      "service": "Infraestructura",
+      "message": "Mantenimiento preventivo completado",
+      "status": "maintenance",
+      "label": "Completado"
+    },
+    {
+      "date": "2026-09-18T10:15:00-03:00",
+      "service": "Televisión",
+      "message": "Señal restablecida con normalidad",
+      "status": "operational",
+      "label": "Resuelto"
+    }
+  ]
+}
 
