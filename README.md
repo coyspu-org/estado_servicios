@@ -25,7 +25,7 @@ endpoint: "./data/status.json",
 por la URL pública del endpoint, por ejemplo:
 
 ```js
-endpoint: "https://botcoyspu.duckdns.org/coyspurest/v1/status",
+
 ```
 
 La URL anterior es un ejemplo: no se ha verificado ni conectado. El endpoint debe permitir solicitudes CORS desde el origen `https://coyspu.github.io` y devolver el formato incluido en `data/status.json`. No incluir credenciales ni información interna en el código o en la respuesta pública. Retirar el aviso de demostración de `index.html` únicamente después de verificar la API real.
